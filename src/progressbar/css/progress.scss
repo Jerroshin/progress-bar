@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$statuscolor: #10ad20;
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 75px;
+  margin-top: 100px;
+  color: #fff;
+}
+.step-btn {
+  margin: 30px 0px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  z-index: 9;
+  position: relative;
+  flex-wrap: wrap;
+  button {
+    box-shadow: none;
+    outline: none;
+    border: none;
+    max-width: 100px;
+    width: 100%;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    background-color: $statuscolor;
+    color: #fff;
+    &:hover {
+      background-color: $statuscolor;
+    }
+    &:active {
+      background-color: $statuscolor !important;
+      border-color: $statuscolor !important;
+    }
+    &:disabled {
+      background-color: $statuscolor !important;
+      border-color: $statuscolor !important;
+    }
+    &.float-left {
+      float: left;
+    }
+    &.float-right {
+      float: right;
+    }
+  }
+}
+.step-div {
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  z-index: 9;
+  position: relative;
+  flex-wrap: wrap;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.RSPBprogressBar {
+  margin: 20px 0px 75px 0px;
+  background-color: #dedddf;
+  .RSPBstep {
+    .indexedStep {
+      color: $statuscolor;
+      width: 24px;
+      height: 24px;
+      font-size: 20px;
+      box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 16%);
+      background-color: #ffffff;
+      position: relative;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        position: absolute;
+        bottom: -25px;
+        color: #939393;
+        // font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        white-space: nowrap;
+      }
+      &.accomplished {
+        background-color: #ffffff;
+        span {
+          color: $statuscolor;
+        }
+        &.animation {
+          &::after,
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background: $statuscolor;
+            border-radius: 50%;
+            z-index: -1;
+            animation: grow 1s ease-in-out infinite;
+          }
+          &::after {
+            background: $statuscolor;
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100px;
+              height: 100px;
+              background: $statuscolor;
+              border-radius: 50%;
+              z-index: -1;
+              animation: grow 1s ease-in-out infinite;
+            }
+          }
+          &::before {
+            background: $statuscolor;
+            animation-delay: -0.5s;
+          }
+          @keyframes grow {
+            0% {
+              transform: scale(0.8, 0.8);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1.8, 1.8);
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .RSPBprogression {
+    background: $statuscolor;
+  }
+}
+.sample {
+  background-color: black;
+  height: 100vh;
+}
