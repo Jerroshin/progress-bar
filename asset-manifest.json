@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/progress-bar/static/css/main.b1c57613.css",
+    "main.js": "/progress-bar/static/js/main.27aa8a4e.js",
+    "static/js/787.cd5a8421.chunk.js": "/progress-bar/static/js/787.cd5a8421.chunk.js",
+    "index.html": "/progress-bar/index.html",
+    "main.b1c57613.css.map": "/progress-bar/static/css/main.b1c57613.css.map",
+    "main.27aa8a4e.js.map": "/progress-bar/static/js/main.27aa8a4e.js.map",
+    "787.cd5a8421.chunk.js.map": "/progress-bar/static/js/787.cd5a8421.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1c57613.css",
+    "static/js/main.27aa8a4e.js"
+  ]
+}
